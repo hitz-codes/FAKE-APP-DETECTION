@@ -1,7 +1,7 @@
 # src/takedown.py
 # Multi‑Brand Takedown Email Generator (FINAL VERSION)
 
-from src.brand_config import BRANDS
+from .brand_config import BRANDS
 
 
 def generate_takedown_email(app_name, package_name, publisher, risk_score, brand):
