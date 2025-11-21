@@ -9,10 +9,10 @@ import os
 import pandas as pd
 
 # Correct imports for running from project root
-from src.colors import GREEN, RED, YELLOW, CYAN, RESET
-from src.scoring import calculate_risk
-from src.evidence import generate_evidence
-from src.takedown import generate_takedown_email
+from .colors import GREEN, RED, YELLOW, CYAN, RESET
+from .scoring import calculate_risk
+from .evidence import generate_evidence
+from .takedown import generate_takedown_email
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))        # detects/scripts folder
