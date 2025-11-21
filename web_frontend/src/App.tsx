@@ -7,6 +7,10 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'detection' | 'manual'>('detection');
   const [selectedApp, setSelectedApp] = useState<AppData | null>(null);
 
+  const getTabClassName = (tab: 'detection' | 'manual') => {
+    return `tab-button ${activeTab === tab ? 'active' : ''}`;
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,13 +20,13 @@ const App: React.FC = () => {
 
       <div className="App-tabs">
         <button
-          className={`tab-button ${activeTab === 'detection' ? 'active' : ''}`}
+          className={getTabClassName('detection')}
           onClick={() => setActiveTab('detection')}
         >
           Detection Dashboard
         </button>
         <button
-          className={`tab-button ${activeTab === 'manual' ? 'active' : ''}`}
+          className={getTabClassName('manual')}
           onClick={() => setActiveTab('manual')}
         >
           Manual App Check
