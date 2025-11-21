@@ -1,6 +1,6 @@
 # src/evidence.py
 
-from src.brand_config import BRANDS
+from .brand_config import BRANDS
 
 def generate_evidence(row):
     brand = row["brand"].lower()
