@@ -178,7 +178,8 @@ export const handleApiError = (error: any): string => {
 // Request/Response interceptors for logging
 api.interceptors.request.use(
   (config) => {
-    console.log(`API Request: ${config.method?.toUpperCase()} ${config.url}`);
+    const method = config.method ? config.method.toUpperCase() : 'UNKNOWN';
+    console.log(`API Request: ${method} ${config.url}`);
     return config;
   },
   (error) => {
