@@ -37,6 +37,9 @@ const EvidenceModal: React.FC<EvidenceModalProps> = ({
     }
   };
 
+  const isOfficialApp = app.is_official === true;
+  const officialText = isOfficialApp ? 'Yes' : 'No';
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -74,8 +77,8 @@ const EvidenceModal: React.FC<EvidenceModalProps> = ({
             {app.is_official !== undefined && (
               <div className="meta-item">
                 <strong>Official:</strong> 
-                <span className={`official-status ${app.is_official ? 'official' : 'unofficial'}`}>
-                  {app.is_official ? 'Yes' : 'No'}
+                <span className={`official-status ${isOfficialApp ? 'official' : 'unofficial'}`}>
+                  {officialText}
                 </span>
               </div>
             )}
