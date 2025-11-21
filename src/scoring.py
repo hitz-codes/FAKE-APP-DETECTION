@@ -1,8 +1,8 @@
 # src/scoring.py
 # Multi‑Brand Risk Scoring (FINAL VERSION)
 
-from src.brand_config import BRANDS
-from src.similarity import similarity
+from .brand_config import BRANDS
+from .similarity import similarity
 
 
 def calculate_risk(app_name: str, publisher: str, brand: str) -> int:
